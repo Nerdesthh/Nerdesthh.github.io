@@ -91,42 +91,86 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
-/* Button */
-.button1 {
-    padding: 14px 28px;
-    position: absolute;
-    top: 1020px;
-    right: 1200px;
-    background-color: var(--main-red);
-    color: var(--white);
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(231,76,60,0.12);
-    z-index: 1000;
-    transition: background-color 0.3s, color 0.3s;
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
+
+#welcomesection {
+    margin-top: 100px;
+    margin-bottom: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 45px 50px 0;
+    max-width: 100%;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Button */
+.button1 {
+    display: block;
+    margin: 32px auto 0 auto; /* 32px top margin, centered horizontally */
+    background-color: var(--main-red);
+    color: var(--white);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(231,76,60,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    padding: 10px 24px;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: fit-content;
+    position: static; /* Remove absolute positioning */
+    right: 50%;
+    top: auto;
+    transform: none;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
 /* Image */
 .myimage img {
-    width: 560px;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 16px;
-    background-color: var(--white);
-    border: 3px solid var(--main-red);
-    box-shadow: 0 2px 12px rgba(231,76,60,0.12);
-    display: block;
-    margin: 40px auto 0 auto; /* 40px top margin, centered horizontally */
-    /* Removed transform and huge margin */
+    width:100%;
+    max-width:400px;
+    height:auto;
+    border:1px solid #b83227;
+    border-radius:10px;
+    display : block;
+}
+
+.colorbox {
+    border: 2px solid #fff;
+    background-color: #fff;
+    position: inherit;
+    width: 100%;
 }
 
 /* Welcome Box */
 .WelcomeBox {
-    width: 800px;
-    margin: 40px auto 0 auto; 
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    top: 50%;
+    left: 5%;
     background-color: var(--white);
     border: 2px solid var(--main-red);
     font-size: 20px;
@@ -139,6 +183,7 @@ a:hover, a:active {
     align-items: center;
     box-shadow: 0 2px 12px rgba(231,76,60,0.08);
     color: var(--dark-red);
+    
 }
 
 #aboutme {
@@ -150,13 +195,15 @@ a:hover, a:active {
 }
 
 .aboutcontainer {
-    width: 800px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
     padding: 20px;
     background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(231,76,60,0.08);
     color: var(--dark-red);
+    margin-bottom: 100px;
 }
 
 
@@ -166,11 +213,29 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 12px 0;
-    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 15px;
     letter-spacing: 1px;
     z-index: 1000;
     box-shadow: 0 -2px 8px rgba(231,76,60,0.04);
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        font-size: 18px;
+        padding: 10px;
+    }
+    .myimage img {
+        max-width: 90vw;
+    }
+    .WelcomeBox, .aboutcontainer {
+        padding: 16px;
+        font-size: 16px;
+    }
+    #links {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
