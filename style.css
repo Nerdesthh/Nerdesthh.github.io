@@ -6,6 +6,8 @@
     
 }
 
+
+
 a:link 
 {
   color: white;
@@ -57,7 +59,10 @@ nav {
     background-color: var(--main-red);
     font-size: 25px;
     box-shadow: 0 2px 8px rgba(231,76,60,0.08);
+    animation: navslideout 0.5s ease-in forwards;
 }
+    
+
 
 p.Name {
     color: var(--white);
@@ -89,17 +94,6 @@ a:link, a:visited {
 a:hover, a:active {
     color: var(--dark);
     text-decoration: underline;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 
@@ -190,7 +184,7 @@ a:hover, a:active {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    margin-top: 100px;
+    padding: 200px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -219,6 +213,31 @@ footer {
     letter-spacing: 1px;
     z-index: 1000;
     box-shadow: 0 -2px 8px rgba(231,76,60,0.04);
+}
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navslideout {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
 }
 
 @media (max-width: 600px) {
