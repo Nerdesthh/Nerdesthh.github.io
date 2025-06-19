@@ -97,10 +97,32 @@ a:hover, a:active {
 }
 
 
+.socials {
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.socials a:hover {
+    color: var(--dark-red);
+    text-decoration: none;
+    animation: large .2s forwards;
+}
+
+.socialscontainer {
+    text-decoration: underline;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    
+}
 
 #welcomesection {
     margin-top: 100px;
-    margin-bottom: 400px;
+    margin-bottom: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -133,13 +155,6 @@ a:hover, a:active {
     transform: none;
 }
 
-.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-top: 20px;
-}
 
 /* Image */
 .myimage img {
@@ -153,7 +168,7 @@ a:hover, a:active {
 
 .colorbox {
     border: 2px solid #fff;
-    background-color: #fff;
+    background-color: var(--light-red);
     position: inherit;
     width: 100%;
 }
@@ -181,15 +196,20 @@ a:hover, a:active {
 }
 
 #aboutme {
-    text-align: center;
     font-size: 18px;
-    font-weight: bold;
     padding: 200px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.h1about {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .aboutcontainer {
     width: 90%;
+    text-align: center;
     max-width: 800px;
     margin: 40px auto 0 auto;
     padding: 20px;
@@ -215,6 +235,14 @@ footer {
     box-shadow: 0 -2px 8px rgba(231,76,60,0.04);
 }
 
+@keyframes large {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
 
 
 @keyframes slideIn {
