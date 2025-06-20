@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(31, 30, 30);
-    
 }
 
-
+body{
+    background-color:  var(--main-red);
+}
 
 a:link 
 {
@@ -40,7 +41,6 @@ a:active
     --dark: #222;
 }
 
-/* General background */
 body {
     background-color: var(--light-red);
     color: var(--dark);
@@ -50,7 +50,6 @@ body {
     overflow-y: scroll;
 }
 
-/* Header and nav */
 nav {
     display: flex;
     align-items: center; 
@@ -62,15 +61,12 @@ nav {
     animation: navslideout 0.5s ease-in forwards;
 }
     
-
-
 p.Name {
     color: var(--white);
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-/* Links */
 #links {
     text-align: center;
     z-index: 1000;
@@ -96,7 +92,6 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
-
 .socials {
     display: flex;
     font-size: 25px;
@@ -117,7 +112,6 @@ a:hover, a:active {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    
 }
 
 #welcomesection {
@@ -133,10 +127,9 @@ a:hover, a:active {
     animation: slideIn 0.8s ease-out forwards;
 }
 
-/* Button */
 .button1 {
     display: block;
-    margin: 32px auto 0 auto; /* 32px top margin, centered horizontally */
+    margin: 32px auto 0 auto;
     background-color: var(--main-red);
     color: var(--white);
     border-radius: 6px;
@@ -149,14 +142,12 @@ a:hover, a:active {
     outline: none;
     text-align: center;
     width: fit-content;
-    position: static; /* Remove absolute positioning */
+    position: static;
     right: 50%;
     top: auto;
     transform: none;
 }
 
-
-/* Image */
 .myimage img {
     width:100%;
     max-width:400px;
@@ -171,9 +162,9 @@ a:hover, a:active {
     background-color: var(--light-red);
     position: inherit;
     width: 100%;
+    padding: 0 0 200px 0;
 }
 
-/* Welcome Box */
 .WelcomeBox {
     width: 90%;
     max-width: 800px;
@@ -192,12 +183,11 @@ a:hover, a:active {
     align-items: center;
     box-shadow: 0 2px 12px rgba(231,76,60,0.08);
     color: var(--dark-red);
-    
 }
 
 #aboutme {
     font-size: 18px;
-    padding: 200px;
+    padding: 0 0 5vw 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -211,17 +201,79 @@ a:hover, a:active {
     width: 90%;
     text-align: center;
     max-width: 800px;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 50px auto;
     padding: 20px;
     background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(231,76,60,0.08);
     color: var(--dark-red);
-    margin-bottom: 100px;
+    border: 1px solid var(--main-red);
 }
 
 
-/* Footer */
+.labelinfo {
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 30px;
+    color: var(--main-red);
+    text-align: center;
+}
+
+.hobbiescontainer {
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--white);
+    border-radius: 12px;
+    color: black;
+    position: static;
+    width: 400px;
+    height: auto;
+    border: 1px solid var(--main-red);
+    padding-bottom: 20px;
+}
+
+.hobbiescontainer li {
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+}
+
+.hobbiescontainer h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.programminglanguages {
+    position: static;
+    width: 400px;
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--main-red);
+    padding-bottom: 50px;
+}
+
+.programminglanguages h2{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.programminglanguages li{
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+    line-height: -30px;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 32px;
+}
+
 footer {
     background-color: var(--main-red);
     color: var(--white);
@@ -244,7 +296,6 @@ footer {
     }
 }
 
-
 @keyframes slideIn {
   from {
     transform: translateY(50px);
@@ -265,7 +316,6 @@ footer {
         transform: translateY(0);
         opacity: 1;
     }
-
 }
 
 @media (max-width: 600px) {
@@ -284,5 +334,17 @@ footer {
     #links {
         flex-direction: column;
         gap: 8px;
+    }
+}
+
+@media (max-width: 900px) {
+    .flex-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hobbiescontainer,
+    .programminglanguages {
+        width: 90%;
+        margin-bottom: 24px;
     }
 }
