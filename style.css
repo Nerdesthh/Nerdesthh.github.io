@@ -52,6 +52,7 @@ body {
 
 nav {
     display: flex;
+    position: fixed;
     align-items: center; 
     justify-content: space-between;
     padding: 14px 32px;
@@ -59,12 +60,16 @@ nav {
     font-size: 25px;
     box-shadow: 0 2px 8px rgba(231,76,60,0.08);
     animation: navslideout 0.5s ease-in forwards;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001;
 }
-    
+
+
 p.Name {
     color: var(--white);
     font-weight: bold;
-    letter-spacing: 2px;
 }
 
 #links {
@@ -92,6 +97,14 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
+.socialscontainer {
+    text-decoration: underline;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 110px;
+}
+
 .socials {
     display: flex;
     font-size: 25px;
@@ -106,23 +119,16 @@ a:hover, a:active {
     animation: large .2s forwards;
 }
 
-.socialscontainer {
-    text-decoration: underline;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-}
+
 
 #welcomesection {
-    margin-top: 100px;
     margin-bottom: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    padding: 45px 50px 0;
+    padding: 100px 50px 50px;
     max-width: 100%;
     animation: slideIn 0.8s ease-out forwards;
 }
@@ -146,6 +152,7 @@ a:hover, a:active {
     right: 50%;
     top: auto;
     transform: none;
+    cursor: pointer;
 }
 
 .myimage img {
@@ -158,11 +165,9 @@ a:hover, a:active {
 }
 
 .colorbox {
-    border: 2px solid #fff;
-    background-color: var(--light-red);
     position: inherit;
     width: 100%;
-    padding: 0 0 200px 0;
+    padding: 40px 0 100px 0;
 }
 
 .WelcomeBox {
@@ -186,9 +191,8 @@ a:hover, a:active {
 }
 
 #aboutme {
+    padding-bottom: 120px;
     font-size: 18px;
-    padding: 0 0 5vw 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .h1about {
@@ -215,7 +219,6 @@ a:hover, a:active {
     font-weight: bold;
     font-size: 25px;
     padding-bottom: 30px;
-    color: var(--main-red);
     text-align: center;
 }
 
@@ -250,7 +253,6 @@ a:hover, a:active {
     background-color: var(--white);
     border-radius: 12px;
     border: 1px solid var(--main-red);
-    padding-bottom: 50px;
 }
 
 .programminglanguages h2{
@@ -263,7 +265,7 @@ a:hover, a:active {
     text-align: center;
     list-style: none;
     font-size: 18px;
-    line-height: -30px;
+    margin-bottom: 8px; /* Adds a gap between each list item */
 }
 
 .flex-row {
@@ -274,11 +276,63 @@ a:hover, a:active {
     gap: 32px;
 }
 
+#projects {
+    padding-bottom: 120px;
+    font-size: 18px;
+}
+
+.projectsheader {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.project-payrollsystem {
+    width: 90%;
+    align-items: center;
+    max-width: 800px;
+    background-color: var(--white);
+    border-radius: 12px;
+    color: black;
+    padding: 20px;
+    border: 1px solid var(--main-red);
+    box-shadow: 0 2px 12px rgba(231,76,60,0.08);
+}
+
+.project-payrollsystem h1 {
+    padding-top: 5px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-payrollsystem h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-payrollsystem p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 footer {
     background-color: var(--main-red);
     color: var(--white);
     text-align: center;
-    padding: 12px 0;
+    padding: 12px 5;
     bottom: 0;
     width: 100%;
     font-size: 15px;
@@ -339,6 +393,10 @@ footer {
 
 @media (max-width: 900px) {
     .flex-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-container {
         flex-direction: column;
         align-items: center;
     }
