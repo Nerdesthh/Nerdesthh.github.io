@@ -308,13 +308,7 @@ a:hover, a:active {
     padding-left: 200px;
 }
 
-.project-payrollsystem h1 {
-    position: static;
-    padding: 10px 24px;
-    right: 50%;
-    top: auto;
-    font-size: 24px;
-}
+/* Removed duplicate .project-payrollsystem h1 block */
 
 .project-payrollsystem p {
     padding-left: 100px;
